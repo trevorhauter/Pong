@@ -136,6 +136,9 @@ def mainLoop(win, leftPaddle, rightPaddle, ball, width, height, ballSpeed, pen):
             ball.setx(-340)
             ball.dx *= -1
 
+        #limits the speed of the app... should help with consistency
+        time.sleep(0.01)
+
 #creates and initializes everything
 def start():
     # creates window
@@ -146,7 +149,7 @@ def start():
     #all the settings for configuration basically
     width = 800
     height = 600
-    ballSpeed = 0.10
+    ballSpeed = 3
 
     win.setup(width=width, height=height)
     # doesn't update the frame - we update it ourselves w the gameloop (i think)
